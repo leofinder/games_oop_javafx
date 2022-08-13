@@ -47,6 +47,7 @@ class BishopBlackTest {
                 () -> {
                     figure.way(destination);
                 });
-        assertThat(exception.getMessage()).isEqualTo("Could not move by diagonal from %s to %s", cell, destination);
+        assertThat(exception.getMessage()).isEqualTo(
+                "Could not move by diagonal from %s to %s", cell, destination);
     }
 }

@@ -37,7 +37,8 @@ public class LogicTest {
                 () -> {
                     logic.move(cell, Cell.H6);
                 });
-        assertThat(exception.getMessage()).isEqualTo(String.format("Could not find figure by %s", cell));
+        assertThat(exception.getMessage()).isEqualTo(
+                String.format("Could not find figure by %s", cell));
     }
 
     @Test
@@ -51,8 +52,8 @@ public class LogicTest {
                 () -> {
                     logic.move(cell, destination);
                 });
-        assertThat(exception.getMessage())
-                .isEqualTo(String.format("Could not move by diagonal from %s to %s", cell, destination));
+        assertThat(exception.getMessage()).isEqualTo(
+                String.format("Could not move by diagonal from %s to %s", cell, destination));
     }
 
     @Test
@@ -68,6 +69,7 @@ public class LogicTest {
                 () -> {
                     logic.move(cell, destination);
                 });
-        assertThat(exception.getMessage()).isEqualTo(String.format("Cell %s is occupied", occupied));
+        assertThat(exception.getMessage()).isEqualTo(
+                String.format("Cell %s is occupied", occupied));
     }
 }
